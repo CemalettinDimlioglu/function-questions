@@ -1,9 +1,14 @@
-function writeWords(word,number){
+function writeWords(ab,s){
+  
+     for(let i = 1; i<= s;i++){
      
-     for(let i = 0; i< number;i++){
-          console.log(word);
+          console.log(ab);
           console.log(" ");
+
      }
+     
 
 }
+
 writeWords("hello", 5);
+writeWords("ali", 5);
