@@ -63,3 +63,33 @@ console.log(yigit_not);
 console.log(adem_not);
 console.log(melike_not);
 
+let ogrenciler = [
+  ["Yiğit", "Bilgi", 2010, [70, 60, 80]],
+  ["Ada", "Bilgi", 2012, [80, 80, 90]],
+  ["Ahmet", "Turan", 2009, [60, 60, 70]],
+];
+for (let i = 0; i < ogrenciler.length; i++) {
+  let notlar = ogrenciler[i][3];
+  let ortalama = (notlar[0] + notlar[1] + notlar[2]) / 3;
+  console.log(
+    "Öğrenci " +
+      (i + 1) +
+      " - " +
+      ogrenciler[i][0] +
+      " " +
+      ogrenciler[i][1] +
+      ", " +
+      (new Date().getFullYear() - ogrenciler[i][2]) +
+      " yaşında, not ortalaması: " +
+      ortalama.toFixed(2)
+  );
+}
+
+const isimler = ["ali", "veli","deli"];
+const array = [1, 2, 3];
+
+let newArray = []
+for (i=0; i<isimler.length; i++){
+     newArray =isimler.map(isim=>isim+"="+ array[i])
+}
+console.log(newArray);
