@@ -85,11 +85,23 @@ for (let i = 0; i < ogrenciler.length; i++) {
   );
 }
 
-const isimler = ["ali", "veli","deli"];
-const array = [1, 2, 3];
+// const isimler = ["ali", "veli","deli"];
+// const array = [1, 2, 3];
 
-let newArray = []
-for (i=0; i<isimler.length; i++){
-     newArray =isimler.map(isim=>isim+"="+ array[i])
-}
+// let newArray = []
+// for (let i=0; i<isimler.length; i++){
+//   // newArray =isimler.map(isim=> `${isimler[i]} = ${array[i]}`)
+//   newArray = `${isimler[i]} = ${array[i]}`;
+// }
+// console.log(newArray);
+// // for (let i = 0; i < isimler.length; i++) {
+// //   console.log(`${isimler[i]} = ${array[i]}`);
+// // }
+
+const isimler = ["ali", "veli", "deli"];
+const array = [1, 2, 3];
+const newArray = isimler.reduce(
+  (obj, key, i) => ({ ...obj, [key]: array[i] }),
+  {}
+);
 console.log(newArray);
