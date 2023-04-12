@@ -1,7 +1,11 @@
 const names = ["ali", "veli", "ayşe", "musa"]
 
 names[2]= "selahaddin"
+names[4]="murtaza"
 console.log(names);
+
+
+
 // console.log(names[2]);
 // console.log(names);
 // console.log(typeof names);
