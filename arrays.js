@@ -47,10 +47,19 @@ let stu3 = ["melike", "didar", 2005, [70, 80, 80]]
 
 let students = [stu1,stu2,stu3];
 
-let yigit_yas = new Date().getFullYear - students [0][2];
-let adem_yas = new Date().getFullYear - students [1][2];
-let melike_yas = new Date().getFullYear - students [2][2];
+let yigit_yas = new Date().getFullYear() - students [0][2];
+let adem_yas = new Date().getFullYear() - students [1][2];
+let melike_yas = new Date().getFullYear() - students [2][2];
 
 console.log(yigit_yas);
 console.log(adem_yas);
 console.log(melike_yas);
+
+let yigit_not = ((students[0][3][0] + students[0][3][1] + students[0][3][2])/3).toFixed(1)
+let adem_not = ((students[1][3][0] + students[1][3][1] + students[1][3][2])/3).toFixed(1);
+let melike_not = ((students[2][3][0] + students[2][3][1] + students[2][3][2])/3).toFixed(1);
+
+console.log(yigit_not);
+console.log(adem_not);
+console.log(melike_not);
+
