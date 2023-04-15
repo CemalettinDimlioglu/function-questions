@@ -110,12 +110,29 @@ console.log(newArray);
 
 //? FOR IN ILE ORNEKLER
 
-const sayilar =[-5,15,22,-4,45,78,-25];
+// const sayilar =[-5,15,22,-4,45,78,-25];
 
-let sonuc = 0;
+// let sonuc = 0;
 
-for (let i in sayilar){
-  sonuc += sayilar[i]
+// for (let i in sayilar){
+//   sonuc += sayilar[i]
+// }
+
+// console.log(sonuc);
+
+const arr = [-5, 15, 22, -4, 45, 78, -25];
+
+let negatives =[];
+let positives =[];
+
+for(let j in arr){
+   if(arr[j]<0){
+    negatives.push(arr[j]);
+   }else {
+    positives.push(arr[j]);
+   }
+
 }
-
-console.log(sonuc);
+console.log(negatives);
+console.log(positives);
+console.log(arr);
