@@ -169,10 +169,9 @@ const findStudent = (names) => {
       counter++;
     }
   }
-  if (counter===0){
+  if (counter === 0) {
     return `${names} can not be found`;
-  }
-  else{
+  } else {
     return `${names} found ${counter}  times`;
   }
 };
@@ -182,6 +181,8 @@ console.log(findStudent("CAN"));
 
 const numbers = [-5, 15, 22, -4, 45, 78, -25];
 
+//? FOR OF EXAMPLES
+
 //? Dizideki elmanların toplamını bulan programı for of ile yazınız.
 const sayilar2 = [-5, 15, 22, -4, 45, 78, -25];
 let sonuc2 = 0;
@@ -189,3 +190,26 @@ for (let item of sayilar2) {
   sonuc2 += item; // sonuc2= sonuc2+ item;
 }
 console.log(sonuc2);
+
+const students2 = [
+  "ahmet",
+  "mehmet",
+  "ismet",
+  "feyza",
+  "ahmet",
+  "feyza",
+  "can",
+  "mehmet",
+  "cem",
+];
+
+const findStudentForof = (names) => {
+  let counter2 = 0;
+  for (let item of students2) {
+    item === names.toLowerCase() && counter2++;
+  }
+  return !counter2
+    ? `${names}can not be found`
+    : `${names}found ${counter2}times`;
+};
+console.log(findStudentForof("ahmet"));
