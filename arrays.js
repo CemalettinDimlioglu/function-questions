@@ -105,3 +105,8 @@ const newArray = isimler.reduce(
   {}
 );
 console.log(newArray);
+
+
+
+//? FOR IN ILE ORNEKLER
+
