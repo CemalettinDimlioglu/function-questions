@@ -209,7 +209,9 @@ const findStudentForof = (names) => {
     item === names.toLowerCase() && counter2++;
   }
   return !counter2
-    ? `${names}can not be found`
+    ? `${names}  can not be found`
     : `${names}found ${counter2}times`;
 };
 console.log(findStudentForof("ahmet"));
+console.log(findStudentForof("mehmet"));
+console.log(findStudentForof("ali"));
