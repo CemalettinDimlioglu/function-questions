@@ -110,3 +110,12 @@ console.log(newArray);
 
 //? FOR IN ILE ORNEKLER
 
+const sayilar =[-5,15,22,-4,45,78,-25];
+
+let sonuc = 0;
+
+for (let i in sayilar){
+  sonuc += sayilar[i]
+}
+
+console.log(sonuc);
