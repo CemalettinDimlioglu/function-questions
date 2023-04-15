@@ -215,3 +215,13 @@ const findStudentForof = (names) => {
 console.log(findStudentForof("ahmet"));
 console.log(findStudentForof("mehmet"));
 console.log(findStudentForof("ali"));
+
+//? foreach examples
+const prices= [100,150,250,89]
+
+for(let price of prices){
+  console.log(price);
+
+}
+console.log("*******");
+prices.forEach((p)=>console.log(p))
