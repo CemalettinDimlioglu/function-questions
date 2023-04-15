@@ -4,8 +4,6 @@
 // names[4]="murtaza"
 // console.log(names);
 
-
-
 // // console.log(names[2]);
 // // console.log(names);
 // // console.log(typeof names);
@@ -21,11 +19,10 @@
 // // let uppercaseArr = arr.map(function(item) {
 // //   return item.toUpperCase();
 // // });
-// // console.log(uppercaseArr); 
+// // console.log(uppercaseArr);
 // // console.log(arr[2]);//
 
 // // output: ['APPLE', 'BANANA', 'ORANGE']
-
 
 // // console.log(arr[1]);
 // // // const isimler = ["ali", "veli"];
@@ -39,7 +36,6 @@
 // // Öğrenci 1: Yiğit Bilgi 2010 (70,60,80)
 // //  Öğrenci 2: Ada Bilgi 2012 (80,80,90)
 // //  Öğrenci 3: Ahmet Turan 2009 (60,60,70)
- 
 
 // let stu1 = ["yigit", "adam", 2010, [70, 60, 80]]
 // let stu2 = ["adem", "aydın", 2013, [70, 90, 80]]
@@ -106,8 +102,6 @@
 // );
 // console.log(newArray);
 
-
-
 // //? FOR IN ILE ORNEKLER
 
 // // const sayilar =[-5,15,22,-4,45,78,-25];
@@ -137,16 +131,61 @@
 // console.log(positives);
 // console.log(arr);
 
-
 //SORU-3
 //aşağıda verilen iki ayrı dizideki eşleşen indis elemanlarını birleştirerek saklayan ayrı bir uygulamayı for in döngüsü ile yazın
 // const adlar = ["Ahmet", "Can", "Mustafa", "Ayşe", "Elif"];
 // const soyAdlar = ["Öztürk", "Yılmaz", "Arı", "Çalı", "Yazı"];
+//? 3.soru
+//  const names = ["Ahmet", "Can", "Mustafa", "Ayşe", "Elif"];
+//  const lastnames = ["Öztürk", "Yılmaz", "Arı", "Çalı", "Yazı"];
+//  const fullnames = [];
+//  for (let i in names) {
+//    fullnames.push(`${names[i]} ${lastnames[i]}}`);
+//  }
+//  console.log(fullnames);
 
- const names = ["Ahmet", "Can", "Mustafa", "Ayşe", "Elif"];
- const lastnames = ["Öztürk", "Yılmaz", "Arı", "Çalı", "Yazı"];
- const fullnames = [];
- for (let i in names) {
-   fullnames.push(`${names[i]} ${lastnames[i]}}`);
- }
- console.log(fullnames);
+// SORU: students dizisinde ogrenci isimleri saklanmaktadir.
+//* ogrencileri aramamizi saglayacak ve aranilan ogrenciden
+//* ne kadar sayida bulunuldugunu ana programa dondurecek bir
+//* fonksiyonu yaziniz. Eger aranilan isimde bir ogrenci yok ise
+//* fonksiyon "ogrenci bulunamadi" dondurulmelidir.
+
+const students = [
+  "ahmet",
+  "mehmet",
+  "ismet",
+  "feyza",
+  "ahmet",
+  "feyza",
+  "can",
+  "mehmet",
+  "cem",
+];
+
+const findStudent = (names) => {
+  let counter = 0;
+  for (let i in students) {
+    if (names.toLowerCase() === students[i]) {
+      counter++;
+    }
+  }
+  if (counter===0){
+    return `${names} can not be found`;
+  }
+  else{
+    return `${names} found ${counter}  times`;
+  }
+};
+console.log(findStudent("ali"));
+console.log(findStudent("MEHMET"));
+console.log(findStudent("CAN"));
+
+const numbers = [-5, 15, 22, -4, 45, 78, -25];
+
+//? Dizideki elmanların toplamını bulan programı for of ile yazınız.
+const sayilar2 = [-5, 15, 22, -4, 45, 78, -25];
+let sonuc2 = 0;
+for (let item of sayilar2) {
+  sonuc2 += item; // sonuc2= sonuc2+ item;
+}
+console.log(sonuc2);
